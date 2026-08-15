@@ -96,7 +96,7 @@ if(isset($_POST['cnpj'], $_POST['email'], $_POST['senha'])){
         .card {
             background: #ffffff;
             width: 360px;
-            border-radius: 6px;
+            border-radius: 20px;
             box-shadow: 0 6px 24px rgba(0,0,0,0.15);
             overflow: hidden;
         }
@@ -137,7 +137,7 @@ if(isset($_POST['cnpj'], $_POST['email'], $_POST['senha'])){
         .entrar-btn {
             border: 1px solid #ccc;
             background: #f5f5f5;
-            border-radius: 4px;
+            border-radius: 20px;
             padding: 5px 12px;
             font-size: 12px;
             color: #333;
@@ -171,7 +171,7 @@ if(isset($_POST['cnpj'], $_POST['email'], $_POST['senha'])){
             width: 100%;
             padding: 9px 10px;
             border: 1px solid #bbb;
-            border-radius: 4px;
+            border-radius: 20px;
             font-size: 13px;
         }
         .campo input:focus {
@@ -191,7 +191,7 @@ if(isset($_POST['cnpj'], $_POST['email'], $_POST['senha'])){
             text-align: center;
             padding: 8px 0;
             border: 1px solid #bbb;
-            border-radius: 4px;
+            border-radius: 20px;
             font-size: 13px;
             color: #333;
             background: #fff;
@@ -207,7 +207,7 @@ if(isset($_POST['cnpj'], $_POST['email'], $_POST['senha'])){
             width: 100%;
             padding: 10px 0;
             border: 1px solid #999;
-            border-radius: 4px;
+            border-radius: 20px;
             background: #f5f5f5;
             font-size: 14px;
             font-weight: 600;
