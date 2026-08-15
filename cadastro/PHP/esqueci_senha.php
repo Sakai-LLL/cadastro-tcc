@@ -91,7 +91,7 @@ if(isset($_POST['cnpj'], $_POST['email'], $_POST['nova_senha'], $_POST['confirma
         .card {
             background: #ffffff;
             width: 360px;
-            border-radius: 6px;
+            border-radius: 20px;
             box-shadow: 0 6px 24px rgba(0,0,0,0.15);
             overflow: hidden;
             padding: 24px;
@@ -152,7 +152,7 @@ if(isset($_POST['cnpj'], $_POST['email'], $_POST['nova_senha'], $_POST['confirma
             width: 100%;
             padding: 9px 10px;
             border: 1px solid #bbb;
-            border-radius: 4px;
+            border-radius: 20px;
             font-size: 13px;
         }
         .campo input:focus {
@@ -175,7 +175,7 @@ if(isset($_POST['cnpj'], $_POST['email'], $_POST['nova_senha'], $_POST['confirma
             width: 100%;
             padding: 10px 0;
             border: 1px solid #999;
-            border-radius: 4px;
+            border-radius: 20px;
             background: #f5f5f5;
             font-size: 14px;
             font-weight: 600;
@@ -199,7 +199,7 @@ if(isset($_POST['cnpj'], $_POST['email'], $_POST['nova_senha'], $_POST['confirma
             color: #1e7e34;
             border: 1px solid #c3e6cb;
             padding: 8px 10px;
-            border-radius: 4px;
+            border-radius: 20px;
             font-size: 12px;
             margin-bottom: 14px;
         }
