@@ -1,18 +1,20 @@
-<form method="POST" action="login.php">
+<?php
 
-    <!-- Campo CNPJ -->
-    <input type="text" placeholder="Digite seu CNPJ" name="cnpj">
-    <br>
+// Inicia a sessão
+session_start();
 
-    <!-- Campo email -->
-    <input type="email" placeholder="Digite seu email" name="email">
-    <br>
+// Verifica se o usuário está logado
+if(isset($_SESSION['cnpj'])){
 
-    <!-- Campo senha -->
-    <input type="password" placeholder="Digite sua senha" name="senha">
-    <br>
+    // Já está logado, vai direto pra home
+    header("Location: home.php");
+    exit;
 
-    <!-- Botão de login -->
-    <input type="submit" value="Login">
+} else {
 
-</form>
+    // Não está logado, vai pro login
+    header("Location: login.php");
+    exit;
+}
+
+?>

@@ -1,4 +1,3 @@
-```php
 <?php
 
 // Cria a classe Usuario
@@ -76,25 +75,24 @@ class Usuario{
     }
 
 
-   // Verifica CNPJ, email e senha
-    public function checkPass($cnpj, $email, $senha){
+    // Verifica email e senha
+    public function checkPass($email, $senha){
 
-    // Procura os três dados no banco
-    $sql = "SELECT * FROM usuario WHERE cnpj = :c AND email = :e AND senha = :s";
+        // Procura o email e a senha no banco
+        $sql = "SELECT * FROM usuario WHERE email = :e AND senha = :s";
 
-    // Prepara o comando
-    $stmt = $this->pdo->prepare($sql);
+        // Prepara o comando
+        $stmt = $this->pdo->prepare($sql);
 
-    // Passa os valores
-    $stmt->bindValue(":c", $cnpj);
-    $stmt->bindValue(":e", $email);
-    $stmt->bindValue(":s", $senha);
+        // Passa os valores
+        $stmt->bindValue(":e", $email);
+        $stmt->bindValue(":s", $senha);
 
-    // Executa a busca
-    $stmt->execute();
+        // Executa a busca
+        $stmt->execute();
 
-    // Retorna true se encontrar
-    return $stmt->rowCount() > 0;
+        // Retorna true se encontrar
+        return $stmt->rowCount() > 0;
     }
 
 
@@ -154,21 +152,41 @@ class Usuario{
         return $stmt->fetch();
     }
 
+    // Procura um usuário pelo email (usado no "esqueci minha senha")
+    public function localizarPorEmail($email){
+
+        // Busca o usuário pelo email
+        $sql = "SELECT * FROM usuario WHERE email = :e";
+
+        // Prepara o comando
+        $stmt = $this->pdo->prepare($sql);
+
+        // Passa o email
+        $stmt->bindValue(":e", $email);
+
+        // Executa a busca
+        $stmt->execute();
+
+        // Retorna o usuário encontrado
+        return $stmt->fetch();
+    }
+
+
     // Exclui um usuário
-public function excluirUsuario($id){
+    public function excluirUsuario($id){
 
-    // Comando para excluir
-    $sql = "DELETE FROM usuario WHERE id = :i";
+        // Comando para excluir
+        $sql = "DELETE FROM usuario WHERE id = :i";
 
-    // Prepara o comando
-    $stmt = $this->pdo->prepare($sql);
+        // Prepara o comando
+        $stmt = $this->pdo->prepare($sql);
 
-    // Passa o ID
-    $stmt->bindValue(":i", $id);
+        // Passa o ID
+        $stmt->bindValue(":i", $id);
 
-    // Executa a exclusão
-    return $stmt->execute();
-}
+        // Executa a exclusão
+        return $stmt->execute();
+    }
 }
 
 ?>
