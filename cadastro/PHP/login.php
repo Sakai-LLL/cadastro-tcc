@@ -85,7 +85,7 @@ if(isset($_POST['email'], $_POST['senha'])){
         .card {
             background: #ffffff;
             width: 360px;
-            border-radius: 20px;
+            border-radius: 6px;
             box-shadow: 0 6px 24px rgba(0,0,0,0.15);
             overflow: hidden;
             padding: 24px;
@@ -140,7 +140,7 @@ if(isset($_POST['email'], $_POST['senha'])){
             width: 100%;
             padding: 9px 10px;
             border: 1px solid #bbb;
-            border-radius: 20px;
+            border-radius: 4px;
             font-size: 13px;
         }
         .campo input:focus {
@@ -163,7 +163,7 @@ if(isset($_POST['email'], $_POST['senha'])){
             width: 100%;
             padding: 10px 0;
             border: 1px solid #999;
-            border-radius: 20px;
+            border-radius: 4px;
             background: #f5f5f5;
             font-size: 14px;
             font-weight: 600;
@@ -171,6 +171,15 @@ if(isset($_POST['email'], $_POST['senha'])){
             cursor: pointer;
         }
         .entrar-btn:hover { background: #ececec; }
+
+        .cadastrar-link {
+            display: block;
+            text-align: center;
+            font-size: 13px;
+            color: #333;
+            margin-top: 18px;
+        }
+        .cadastrar-link:hover { color: #000; }
 
         .msg-erro {
             background: #fdecea;
@@ -225,6 +234,9 @@ if(isset($_POST['email'], $_POST['senha'])){
             <input type="submit" name="botao" value="Entrar" class="entrar-btn">
 
         </form>
+
+        <!-- Ainda não tem conta -->
+        <a class="cadastrar-link" href="cadastro.php">Ainda não tem conta? Cadastre-se</a>
 
     </div>
 
